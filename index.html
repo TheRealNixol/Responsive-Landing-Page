@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html  >
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- <link href="css/fontawesome/css/all.css" rel="stylesheet"> -->
+	<script defer src="css/fontawesome/js/all.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body id="index">
+	<section id="small-menu" class="container-fluid">
+		<div class="row">
+			<div id="sm_links" class="col">
+				<ul>
+					<li id="first"><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+			<div id="sm_social" class="col">
+				<ul>
+					<li><a href="#"><i class="fab fa-twitter fa-lg"></i></a></li>
+					<li><a href="#"><i class="fab fa-facebook-f fa-lg"></i></a></li>
+				</ul>
+			</div>
+		 </div>
+	</section>
+	<section id="menu" class="container-fluid">
+		<div id="logo">
+			<a  href="/sexta/"><img id="logo_img" src="img/logo.png" alt="Logo"></a>
+		</div>
+		<div class="topnav" id="myTopnav">
+			<a href="community.html" id="com" class="active">Community</a>
+			<a href="news.html">News</a>
+			<a href="calender.html">Calender</a>
+			<a href="#" class="rbtn">Register</a>
+			<a href="#" class="rbtn">Sign In</a>
+			<!--<div id ="bar" class="row"></div>-->
+			<a href="#" id="last" class="btn-group-justified">Register</a>
+			<a href="#" id="first" class="btn-group-justified">Sign In</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars fa-lg"></i></a>
+		</div>				
+	</section>
+	<section id="land" class="container-fluid" style="background-color:red;">
+		<img src="img/background.jpg">
+		<div class="darker"></div>
+		<h1>Life is too short <br>for a long introduction.</h1>
+		<p>"Never doubt that a small group of thoughtful,<br> committed citizens can change the world"</p>
+		<div id="buttons">
+			<a href="#" id="read">Read More</a>
+			<a id="block">|</a>
+			<a href="#" id="play"><i class="far fa-play-circle fa-3x"></i></a>
+			<a href="#" id="watch">Watch our video</a>
+		</div>	
+	</section>
+	<script>
+	function myFunction() {
+		var x = document.getElementById("myTopnav");
+		var y = document.getElementsByClassName("container-fluid");
+		var btn = document.getElementsByClassName("btn-group-justified");
+		var rbtn = document.getElementsByClassName("rbtn");
+		
+		if(y[1].id === "menu"){
+			y[1].id += "_responsive";
+			btn[0].style.display = "none";
+			btn[1].style.display = "none";
+			rbtn[0].style.display = "block";
+			rbtn[1].style.display = "block";
+		}else{
+			y[1].id = "menu";
+			btn[0].style.display = "block";
+			btn[1].style.display = "block";
+			rbtn[0].style.display = "none";
+			rbtn[1].style.display = "none";
+		}
+		
+		
+		if (x.className === "topnav") {
+			x.className += " responsive";
+		} else {
+			x.className = "topnav";
+		}
+	}
+	</script>
+</body>
+</html>
